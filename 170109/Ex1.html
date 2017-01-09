@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+
+<style>
+    body {
+        margin-top : 15px;
+    }
+
+    .vignette {
+        width  : 150px;
+        height : 150px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-12 col-md-12" align="center">
+            <img src="http://orig09.deviantart.net/8323/f/2011/183/b/6/dr_who_wallpaper_by_bennysunshine-d3ks5c0.png"
+                 class="vignette"/>
+            <img src="http://play.presse-citron.net/wp-content/uploads/2015/10/the-class.jpeg" class="vignette"/>
+            <img src="http://az795576.vo.msecnd.net/bh-uploads/2016/02/1-Dr-Who-1050x591.jpg" class="vignette"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" align="center">
+            <input type="button" onclick="resize()" class="btn btn-primary" value="Resize!">
+        </div>
+    </div>
+</div>
+
+<script>
+    function resize() {
+        var elements = document.querySelectorAll('.vignette'),
+            i,
+            size = '50';
+
+        for (i = 0; i < elements.length; i++) {
+            if (elements[i].clientWidth == size && elements[i].clientHeight == size) {
+                size = '150';
+            }
+            elements[i].style.width  = size + 'px';
+            elements[i].style.height = size + 'px';
+        }
+    }
+</script>
+
+</body>
+</html>
