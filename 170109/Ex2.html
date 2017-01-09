@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    body {
+        margin-top : 20px;
+    }
+</style>
+<div class="container">
+    <form name="form" onsubmit="return validateForm()" class="form-horizontal">
+        <p>Merci de remplir ce formulaire</p>
+        <div class="form-group">
+            <label for="lastname" class="col-md-3 form-label">Veuillez saisir votre nom :</label>
+            <div class="col-md-4">
+                <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Insérez votre nom">
+            </div>
+            <div class="col-md-5">
+                <span id="name"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstname" class="col-md-3 form-label">Veuillez saisir votre prénom :</label>
+            <div class="col-md-4">
+                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Insérez votre prénom">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="col-md-3 form-label">Veuillez saisir votre mot de passe :</label>
+            <div class="col-md-4">
+                <input type="password" id="password" class="form-control" placeholder="Insérez votre mot de passe">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="col-md-3 form-label">Veuillez saisir votre e-mail :</label>
+            <div class="col-md-4">
+                <input type="email" id="email" class="form-control" placeholder="Insérez votre e-mail">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="message" class="col-md-3 form-label">Votre message :</label>
+            <div class="col-md-4">
+                <textarea name="message" id="message" class="form-control" placeholder="Saisissez votre message"
+                          cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone" class="col-md-3 form-label">Veuillez saisir votre téléphone :</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-addon">+33</span>
+                    <input type="tel" id="phone" class="form-control" placeholder="01xxxxxxxx">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="number" class="col-md-3 form-label">Veuillez saisir un nombre :</label>
+            <div class="col-md-4">
+                <input type="number" id="number" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="date" class="col-md-3 form-label">Veuillez saisir votre anniversaire :</label>
+            <div class="col-md-4">
+                <input type="date" id="date" class="form-control">
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success">
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var name = document.forms["form"]["lastname"].value;
+        if (name.charAt(0) !== 'A') {
+            document.getElementById('name').innerHTML = "Votre nom doit commencer par un A";
+            return false
+        }
+    }
+</script>
+</body>
+</html>
