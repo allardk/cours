@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<input type="number" name="numbers" id="number1">
+<input type="number" name="numbers" id="number2">
+<input type="button" value="Send" onclick="oddOrEven()">
+<span id="message"></span>
+
+<script type="text/javascript">
+
+    function oddOrEven() {
+        var number1 = document.getElementById('number1').value;
+        var number2 = document.getElementById('number2').value;
+
+        console.log("number 1: " + number1 + ", number2: " + number2);
+/*
+        if (value === 0 || !!(value && !(value % 2))) {
+//            alert("Even")
+            document.getElementById('message').innerHTML = "<b>Even</b>";
+        } else {
+//            alert("Odd");
+            document.getElementById('message').innerHTML = "<b>Odd</b>";
+        }*/
+    }
+
+
+</script>
+</body>
+</html>

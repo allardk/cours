@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>....</title>
+</head>
+<body>
+<p id="ma_balise">Hello</p>
+<P>Vive le rails</P>
+<a href="#" onclick="alert('Vous avez cliqué !');">Ne cliquez pas ici.</a>
+<div id="date"></div>
+
+<script>
+    document.getElementById("ma_balise").style.color = "#999999";
+    window.document.write(window.screenX);
+    if (window.screenX == 0) {
+        color = "#FFFFFF";
+    } else {
+        color = "#000000";
+    }
+    document.body.style.backgroundColor = color;
+
+    setInterval(function () {
+        document.getElementById('date').innerHTML = new Date();
+    }, 1000);
+</script>
+</body>
+</html>
